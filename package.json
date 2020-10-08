@@ -2,9 +2,9 @@
   "name": "jacob-boodry-bookmarks-app-take2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server", 
+    "start": "webpack-dev-server",
     "build": "webpack --mode production"
   },
   "repository": {

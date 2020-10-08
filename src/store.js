@@ -18,7 +18,7 @@ function findById(id) {
     return this.bookmarks.find(currentBookmark => currentBookmark.id === id);
 }
 
-// filters through bookmarks[] to find results matching the other.filter value
+// filters through bookmarks[] to find results matching the status.filter value
 function filterBy() {
     return this.bookmarks.filter(bookmark => bookmark.rating >= status.filter);
 }
@@ -47,5 +47,5 @@ export default {
     filterBy,
     findAndDelete,
     findAndUpdate,
-    setError
+    saveError
 };

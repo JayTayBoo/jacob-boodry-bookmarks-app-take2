@@ -1,18 +1,16 @@
 import $ from 'jquery';
 import './main.css';
-// Imports bookmarks[] and other{} from Store
-import store from './store.js';
 // Imports all the functions from Store
-import {addNewBookmark, findById, filterBy, findAndDelete, findAndUpdate, setError} from './store.js';
-import {render, bindEventListeners} from './bookmarks.js';
-import {getList, createBookmark, deleteBookmark} from './api.js';
+import store from './store.js';
+import bookmarks from './bookmarks.js';
+import api from './api.js';
 
 function main() {
-    getList()
-      .then(data => {data.forEach(bookmark => addBookmark(bookmark));
-      render();
+    api.getList()
+      .then(data => {data.forEach(bookmark => store.addNewBookmark(bookmark));
+      bookmarks.render();
     });
-    bindEventListeners();
+    bookmarks.bindEventListeners();
 }
 
 $(main);

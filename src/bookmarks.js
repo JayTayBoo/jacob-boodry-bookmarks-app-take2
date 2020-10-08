@@ -4,7 +4,7 @@ import store from './store';
 
 const generateError = function (message) {
     return `
-        <div class="error-display${!store.other.error ? ' hidden':''}">
+        <div class="error-display${!store.status.error ? ' hidden':''}">
             <p>${message}</p>
             <button id="close-error">Okay</button>
         </div>
@@ -40,13 +40,13 @@ const generateBookmarkElement = function(bookmark){
 
     let element;
     if(bookmark.expanded){
-        el = `
-        <span class="bookmark">${bookmark.title}<button id="delete">&#128465;</button></span>
+        element = `
+        <span class="bookmark">${bookmark.title}<button id="delete">&#9851; Delete &#9851;</button></span>
         <span class="sub-header"><button href="${bookmark.url}" id="visit">Visit Site</button>Rating: ${bookmark.rating? bookmark.rating:'None'}</span>
         <p class="desc">${bookmark.desc? bookmark.desc: 'No description available.'}</p>
         `;
     } else {
-        el = `<div class="bookmark"><span class="title">${bookmark.title}</span><span class="rating">${rating}</span></div>`;
+        element = `<div class="bookmark"><span class="title">${bookmark.title}</span><span class="rating">${rating}</span></div>`;
     }
 
 
@@ -60,16 +60,16 @@ const generateBookmarksString = function(bookmarkList){
     const bookmarks = bookmarkList.map(bookmark => generateBookmarkElement(bookmark));
     return `
         <div>
-            <h2>My Bookmarks</h2>
+            <h2>&#127825; Bookmarks &#127825;</h2>
             <div id="btns-container">
-                <button id="new"><span id="plus">&#10010;</span> New</button>
+                <button id="new">&#x1F35E; Add New Bookmark &#x1F35E;</button>
                 <select name="rating" id="rating">
                     <option value="">Filter By</options>
-                    <option value="1">(1 Star) &#9733;</option>
-                    <option value="2">(2 Stars) &#9733; &#9733;</option>
-                    <option value="3">(3 Stars) &#9733; &#9733; &#9733;</option>
-                    <option value="4">(4 Stars) &#9733; &#9733; &#9733; &#9733;</option>
-                    <option value="5">(5 Stars) &#9733; &#9733; &#9733; &#9733; &#9733;</option>
+                    <option value="1"> &#9733;</option>
+                    <option value="2"> &#9733; &#9733;</option>
+                    <option value="3"> &#9733; &#9733; &#9733;</option>
+                    <option value="4"> &#9733; &#9733; &#9733; &#9733;</option>
+                    <option value="5"> &#9733; &#9733; &#9733; &#9733; &#9733;</option>
                 </select>
             </div>
             ${bookmarks.join('')}
@@ -88,10 +88,10 @@ const handleFilter = function(){
 }
 
 const generateAddView = function(){
-    return `
+    return (`
     <form>
-        <h2>My Bookmarks</h2>
-        <label for="url">Add New Bookmark:</label>
+        <h2>&#127825; Bookmarks &#127825;</h2>
+        <label for="url"> Add a New Bookmark! </label>
         <input type="text" id="url" placeholder="https://www.example.com" required>
         <label for="title"></label>
         <input type="text" id="title" placeholder="Name" required>
@@ -115,7 +115,10 @@ const generateAddView = function(){
             <button type="submit">Create</button>
         </div>
     </form>
-    `
+    <div>
+      <button onclick="window.location.href='https://www.youtube.com/watch?v=oHg5SJYRHA0'">&#129505; Don't Click Me &#129505;</button>
+    </div>
+    `)
 }
 
 const render = function() {
@@ -135,8 +138,8 @@ const handleRatingSelected = function(){
 }
 
 const handleBookmarkClick = function() {
-    $('main').on('click', '.js-bookmark', function(e) {
-        let id = $(e.currentTarget).attr('id');
+    $('main').on('click', '.js-bookmark', function(event) {
+        let id = $(event.currentTarget).attr('id');
         let bookmark = store.findById(id);
         bookmark.expanded = !bookmark.expanded;
         render();
@@ -194,15 +197,10 @@ function handleDelete(){
     })
 }
 
-const handleEditBm = function(){
-
-}
-
 const bindEventListeners = function(){
     handleBookmarkClick();
     handleCreate();
     handleDelete();
-    handleEditBm();
     handleCancel();
     handleNew();
     handleRatingSelected();
@@ -210,4 +208,4 @@ const bindEventListeners = function(){
     handleCloseError();
 }
 
-export {render, bindEventListeners};
+export default {render, bindEventListeners};

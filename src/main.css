@@ -1,17 +1,23 @@
+h2{
+  font-size: xx-large;
+}
 body{
+  font-family: 'Lato', 'Arial Narrow', Arial, sans-serif;
   max-width: 400px;
   margin: auto;
   padding: 10px;
+  color: white;
+  background-color: #444444;
+  background-image: url(images/congruent_outline.png);
 }
 
 form, main>div {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  background-color: beige;
+  background-color: #44444400;
   text-align: center;
   min-height: 600px;
-
 }
 
 label {
@@ -40,22 +46,15 @@ div.bookmark span.rating {
   margin-right: 10px;
   font-size: large;
 }
-.js-bm-list {
-  margin-top: 10px;
-  padding: 5px 5px;
-  border: 3px solid gray;
-  border-radius: 25px;
-  background-color: beige;
-}
-
 .js-bookmark {
-  border: 2px solid darkgray;
+  border: 1px solid #5ca3ff70;
   padding: 10px 5px;
   margin: 10px 0;
-  border-radius: 25px;
-  background-color: burlywood;
+  border-radius: 5px;
+  background-image: url(images/white-waves.png);
   display: flex;
   flex-direction: column;
+  color: #222222;
 }
 
 #desc {
@@ -67,29 +66,33 @@ input[type="radio"]{
   display: none;
 }
 div#rating{
-  background-color: rgb(100, 5, 5);
+  border-radius: 5px;
+  background-image: url(images/white-waves.png);
   font-size: xx-large;    
   padding: 0;
   margin: 20px 0;
 }
 
+button {
+  border: 1px solid #5ca3ff70;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: medium;
+}
+
 .no-fill {
-  color: white;
+  color: #2c2c2c77;
 }
 
 .fill {
-  color: black;
-}
-
-#delete {
-  font-size: xx-large;
-  border: none;
-  background-color: burlywood;
-}
-
-#plus {
-  color: green;
-  font-size: large;
+  color: #222222;
+  background: linear-gradient(to bottom right,  #96c4ff,#8340ff88);
+  text-shadow:0px 0px 2px rgba(0, 0, 0, 0.03);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text; /* for compatability */
+  box-decoration-break: clone;
+  -webkit-text-fill-color: transparent;
 }
 
 div.error-display {
