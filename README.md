@@ -1,4 +1,11 @@
 # jacob-boodry-bookmarks-app
+
+GitHub:
+https://github.com/JayTayBoo/jacob-boodry-bookmarks-app-take2
+GitHub Pages:
+https://jaytayboo.github.io/jacob-boodry-bookmarks-app-take2/docs/dist
+
+
 ### Grading
 To receive a passing grade, the project must:
 1. [ x] Fulfill every non-extension user story below
