@@ -1,0 +1,101 @@
+body{
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+}
+
+form, main>div {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  text-align: center;
+  min-height: 600px;
+
+}
+
+label {
+  padding: 10px;
+}
+
+input[type="submit"] {
+  max-width: 150px;
+  margin: auto;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: large;
+}
+
+div.bookmark {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+div.bookmark span.title {
+  padding-left: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+div.bookmark span.rating {
+  margin-right: 10px;
+  font-size: large;
+}
+.js-bm-list {
+  margin-top: 10px;
+  padding: 5px 5px;
+  border: 3px solid gray;
+  border-radius: 25px;
+  background-color: beige;
+}
+
+.js-bookmark {
+  border: 2px solid darkgray;
+  padding: 10px 5px;
+  margin: 10px 0;
+  border-radius: 25px;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+}
+
+#desc {
+  margin-top: 10px;
+  height: 300px;
+}
+
+input[type="radio"]{
+  display: none;
+}
+div#rating{
+  background-color: rgb(100, 5, 5);
+  font-size: xx-large;    
+  padding: 0;
+  margin: 20px 0;
+}
+
+.no-fill {
+  color: white;
+}
+
+.fill {
+  color: black;
+}
+
+#delete {
+  font-size: xx-large;
+  border: none;
+  background-color: burlywood;
+}
+
+#plus {
+  color: green;
+  font-size: large;
+}
+
+div.error-display {
+  min-height: 0;
+}
+.hidden {
+  visibility: hidden;
+  margin-top: -50px;
+}
