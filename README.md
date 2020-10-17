@@ -5,6 +5,8 @@ https://github.com/JayTayBoo/jacob-boodry-bookmarks-app-take2
 GitHub Pages:
 https://jaytayboo.github.io/jacob-boodry-bookmarks-app-take2/docs/dist
 
+A Simple Bookmark Keeping App Built with JQuery and the Thinkful Bookmark API. 
+
 
 ### Grading
 To receive a passing grade, the project must:

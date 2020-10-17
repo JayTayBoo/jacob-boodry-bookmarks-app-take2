@@ -110,6 +110,12 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
+.bigRed {
+  color: red;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
 div.error-display {
   min-height: 0;
 }

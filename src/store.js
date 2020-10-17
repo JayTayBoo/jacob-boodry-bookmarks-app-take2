@@ -3,7 +3,7 @@ import $ from 'jquery';
 const bookmarks = [];
 const status = {
   error: null,
-  filter: 1,
+  filter: "",
   currentPage: 'main'
 }
 
